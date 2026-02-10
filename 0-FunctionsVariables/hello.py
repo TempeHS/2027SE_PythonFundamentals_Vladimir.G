@@ -57,11 +57,27 @@ Incremently is better than this
 
 A feature worth knowing
 
-
-"""
-
 # Ask user for name
 name = input("What's your name? ")
 
 # Say hello to user
 print("Hello, " + name)
+
+def for define (create your own functions)
+
+scope only exisits in the variable you defind it
+
+"""
+
+
+def main():
+    name = input("What's your name? ")
+    hello(name)
+
+
+def hello(to="world"):
+    print("hello,", to)
+
+
+main()
+# name is an argument in this code
