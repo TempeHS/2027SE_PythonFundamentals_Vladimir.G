@@ -25,12 +25,5 @@ fruit_dict = [
 
 for current_fruit in fruit_dict:
     if current_fruit["fruit"] == chosen_fruit:
-        print({current_fruit["Calories"]})
+        print(f'{current_fruit["Calories"]}')
         break
-
-
-"""
-for chosen_fruit in fruit_dict:
-    if fruit_dict["fruit"] == chosen_fruit:
-        print({fruit_dict["fruit"]} has {fruit_dict["Calories"]})
-"""
