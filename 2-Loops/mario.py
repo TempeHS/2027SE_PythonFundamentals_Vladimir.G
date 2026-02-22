@@ -21,7 +21,6 @@ def print_row(width):
 
 
 main()
-"""
 
 
 def main():
@@ -38,3 +37,5 @@ def print_row(width):
 
 
 main()
+
+"""
