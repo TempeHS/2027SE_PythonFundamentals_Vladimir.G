@@ -13,11 +13,8 @@ def main():
 
 
 def get_value(fuel_percentage):
-    while True:
-        try:
-            return input(fuel_percentage)
-        except (ValueError, ZeroDivisionError):
-            pass
+
+    return input(fuel_percentage)
 
 
 def calculate(fuel_percent):
@@ -25,13 +22,9 @@ def calculate(fuel_percent):
         x, y = fuel_percent.split("/")
         x = float(x)
         y = float(y)
-    except ValueError:
-        pass
-
-    try:
         fuel_converted = (x / y) * 100
         return fuel_converted
-    except ZeroDivisionError:
+    except (ValueError, ZeroDivisionError):
         pass
 
 
