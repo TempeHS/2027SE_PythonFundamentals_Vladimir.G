@@ -17,15 +17,14 @@ def main():
     while True:
         try:
             item = input("What item would you like to order? ").title()
+            price = food_dict[item]
+            total += price
             print("You have ordered", item)
+            print(f"${item} for ${price}")
         except (EOFError, KeyboardInterrupt):
             break
 
-    if item in food_dict:
-        total += food_dict[item]
-        print("total: $", item)
-
-    print("program did not reach here")
+    print(f"\ntotal: ${total:.2f}")
 
 
 main()
