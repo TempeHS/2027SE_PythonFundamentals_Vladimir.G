@@ -14,7 +14,7 @@ def main():
 
     bitcoin = convert(n)
 
-    print(f"You have {bitcoin:,} bitcoin")
+    print(f"You have {bitcoin:,} dollars")
 
 
 def convert(n):
