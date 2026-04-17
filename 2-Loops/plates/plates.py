@@ -31,7 +31,7 @@ def is_valid_tail(s):
     checking_numbers = False
 
     for c in s:
-        if not s.isalnum:
+        if not s.isalnum():
             return False
         if checking_letters:
             if not c.isalpha():

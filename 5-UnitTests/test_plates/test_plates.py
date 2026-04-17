@@ -23,3 +23,17 @@ def test_characters():
     assert plates.is_valid("AA AA") is False
     assert plates.is_valid("AA?AA") is False
     assert plates.is_valid("AAAA22") is True
+
+
+"""
+check 50 note
+
+check50 cs50/problems/2022/python/tests/plates 
+Connecting........
+Authenticating...
+Missing environment variable CS50_GH_USER
+Missing environment variable CS50_TOKEN
+Please visit https://cs50.dev/restart to restart your codespace.
+
+Did not fix error
+"""
