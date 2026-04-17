@@ -45,4 +45,5 @@ def is_valid_tail(s):
     return True
 
 
-main()
+if __name__ == "__main__":
+    main()
