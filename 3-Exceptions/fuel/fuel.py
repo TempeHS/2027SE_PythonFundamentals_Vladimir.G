@@ -22,8 +22,12 @@ def calculate(fuel_percent):
     x, y = fuel_percent.split("/")
     x = float(x)
     y = float(y)
+
+    if y == 0:
+        raise ZeroDivisionError
     if x > y:
         raise ValueError
+
     fuel_converted = (x / y) * 100
     return fuel_converted
 
