@@ -25,10 +25,11 @@ import sys
 
 
 class Jar:
+
         def __init__(self, capacity=12):
         try:
                 self.capacity = capacity
-                
+
                 if capacity < 0:
                         raise ValueError("Capacity cannot be negative")
         except ValueError:
@@ -40,7 +41,7 @@ class Jar:
         def deposit(self, n):
 
         try:
-                if n > current capacity?
+                if n > current capacity:
                         raise ValueError("Cookies exceed capacity")
                 else:
                         add cookies
