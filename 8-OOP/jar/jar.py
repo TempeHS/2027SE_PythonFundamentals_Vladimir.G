@@ -26,33 +26,33 @@ import sys
 
 class Jar:
 
-        def __init__(self, capacity=12):
+    def __init__(self, capacity=12):
         try:
-                self.capacity = capacity
+            self.capacity = capacity
 
-                if capacity < 0:
-                        raise ValueError("Capacity cannot be negative")
+            if capacity < 0:
+                raise ValueError("Capacity cannot be negative")
         except ValueError:
-                sys.exit()
+            sys.exit()
 
-        def __str__(self):
-                return f"🍪"
+    def __str__(self):
+        return f"🍪"
 
-        def deposit(self, n):
+    def deposit(self, n):
 
         try:
-                if n > current capacity:
-                        raise ValueError("Cookies exceed capacity")
-                else:
-                        add cookies
-                except ValueError:
-                        sys.exit()
+            if self.size + n > self.capacity:
+                raise ValueError("Cookies exceed capacity")
+            else:
+                self.size += n
+        except ValueError:
+            sys.exit()
 
-        def withdraw(self, n): ...
+    def withdraw(self, n): ...
 
-        @property
-        def capacity(self): ...
+    @property
+    def capacity(self): ...
 
-        @property
-        def size(self): ...
-
+    @property
+    def size(self):
+        remaining = self.capacity - self.size
