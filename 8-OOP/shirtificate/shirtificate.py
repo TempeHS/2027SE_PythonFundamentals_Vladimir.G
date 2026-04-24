@@ -6,8 +6,7 @@ def main():
 
     pdf = FPDF()
     pdf = set_up(pdf)
-    add_title_and_image(pdf)
-    add_name(pdf, name)
+    add_image_title_name(pdf, name)
     pdf.output("shirtificate.pdf")
 
 
@@ -16,8 +15,11 @@ def set_up(pdf):
     return pdf
 
 
-def add_title_and_image(pdf):
+def add_image_title_name(pdf, name):
     pdf.add_page()
+
+    pdf.image("shirtificate.png", 0, 50, 0)
+
     pdf.set_font(
         "Helvetica",
         style="B",
@@ -26,17 +28,13 @@ def add_title_and_image(pdf):
     pdf.set_text_color(0, 0, 0)
     pdf.cell(0, 10, "CS50 Shirtficate", border=1, align="C")
 
-    pdf.image("shirtificate.png", 0, -10, 0)
-
-
-def add_name(pdf, name):
     pdf.set_font(
         "Helvetica",
         style="B",
         size=16,
     )
     pdf.set_text_color(255, 255, 255)
-    pdf.cell(0, 0, name, align="C")
+    pdf.cell(0, 50, f"{name} took CS50", align="C")
 
 
 main()
